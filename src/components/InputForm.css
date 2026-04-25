@@ -1,0 +1,118 @@
+.input-form-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.form-card {
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 12px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.form-card h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #e0e7ff;
+}
+
+.form-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+textarea {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 8px;
+  color: #e0e7ff;
+  padding: 15px;
+  font-family: inherit;
+  font-size: 1em;
+  resize: vertical;
+  transition: border-color 0.3s;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #ff4444;
+  box-shadow: 0 0 0 3px rgba(255, 68, 68, 0.1);
+}
+
+textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button {
+  background: linear-gradient(135deg, #ff4444, #ffaa00);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 68, 68, 0.3);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.examples {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.examples h3 {
+  font-size: 0.95em;
+  margin-bottom: 15px;
+  color: #a5b4fc;
+}
+
+.examples ul {
+  list-style: none;
+}
+
+.examples li {
+  background: rgba(15, 23, 42, 0.5);
+  border-left: 3px solid #ff4444;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .input-form-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .form-card {
+    padding: 20px;
+  }
+
+  textarea {
+    min-height: 120px;
+  }
+}
